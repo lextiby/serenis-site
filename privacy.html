@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Serenis — Politica de confidențialitate</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#100e0d">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .legal { padding-top: 44px; }
+  .legal h2 { font-family: var(--serif); font-weight: 400; font-size: 22px; margin: 34px 0 10px; }
+  .legal p, .legal li { color: #d6cdc3; font-size: 16px; }
+  .legal ul { padding-left: 20px; margin: 0 0 14px; }
+  .legal li { margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="wordmark" href="./">SERENIS</a>
+  <span class="season">Sezonul Fondator · București</span>
+</header>
+<main class="legal">
+  <p class="eyebrow">Politica de confidențialitate</p>
+  <h1 class="h1">Ce date colectăm, de ce, și ce poți face cu ele.</h1>
+  <p class="fine">Ultima actualizare: 8 octombrie 2026</p>
+
+  <h2>Cine este operatorul</h2>
+  <p>Operatorul datelor este <strong data-controller>LEX INC S.R.L.</strong><span data-controller-details></span> <span data-contact-line></span></p>
+
+  <h2>Ce colectăm</h2>
+  <ul>
+    <li><strong>Răspunsurile din reflecție</strong> (șase întrebări cu variante fixe: ce cauți, cât loc ai pentru cineva nou, când s-a încheiat ultima relație importantă, când ai avut ultima primă întâlnire, ce te-a obosit în dating, ritmul preferat).</li>
+    <li><strong>Datele din aplicație</strong>: prenume, email, vârstă, cum te descrii (femeie / bărbat / altfel), pe cine vrei să cunoști, intervalul de vârstă care te interesează, orașul, momentele în care ai putea ieși, motivul pentru care aplici și cum ai aflat de Serenis.</li>
+    <li><strong>Răspunsul tău la întrebarea despre preț</strong> și, dacă alegi, suma maximă pe care ai plăti-o.</li>
+    <li><strong>Date tehnice despre folosirea paginii</strong>: ce pași parcurgi, asociați unui identificator aleator valabil doar pentru vizita curentă, varianta de pagină afișată, parametrii de campanie din link (UTM), domeniul de pe care ai venit și tipul de dispozitiv (mobil sau desktop).</li>
+  </ul>
+  <p>Nu colectăm fotografii, număr de telefon, adresă sau date de card. Nu folosim cookie-uri și nu salvăm nimic pe dispozitivul tău.</p>
+
+  <h2>De ce și pe ce temei</h2>
+  <ul>
+    <li>Ca să evaluăm aplicația ta și să te contactăm despre Sezonul Fondator — pe baza acordului tău (art. 6 alin. 1 lit. a GDPR) și a demersurilor pe care le faci la cererea ta înaintea unui eventual contract (art. 6 alin. 1 lit. b).</li>
+    <li>Informația despre pe cine vrei să cunoști poate dezvălui orientarea sexuală, așa că o folosim doar cu acordul tău explicit (art. 9 alin. 2 lit. a GDPR) și doar pentru a-ți face introduceri.</li>
+    <li>Datele tehnice le folosim pentru statistici agregate despre cum funcționează pagina (de exemplu, câți oameni ajung la final) — pe baza interesului nostru legitim de a înțelege dacă Serenis merită construit (art. 6 alin. 1 lit. f).</li>
+  </ul>
+  <p>Fiecare aplicație este citită de un om. Nu luăm decizii exclusiv automate care să aibă efecte importante asupra ta.</p>
+
+  <h2>Cine are acces</h2>
+  <p>Doar echipa Serenis. Nu vindem și nu închiriem date. Folosim doi furnizori tehnici: GitHub (găzduiește această pagină și, ca orice server web, procesează adresa IP pentru a o livra) și Google (aplicațiile sunt stocate într-un document Google Sheets cu acces restricționat). Acești furnizori pot procesa date în afara Spațiului Economic European, inclusiv în SUA, în baza Cadrului UE-SUA privind confidențialitatea datelor.</p>
+
+  <h2>Cât timp păstrăm datele</h2>
+  <p>Cel mult 12 luni de la trimiterea aplicației, dacă nu devii membru. Datele tehnice de utilizare, tot cel mult 12 luni. Le ștergem mai devreme oricând ne ceri.</p>
+
+  <h2>Drepturile tale</h2>
+  <p>Poți cere oricând acces la date, corectarea sau ștergerea lor, restricționarea prelucrării, portabilitatea datelor sau te poți opune prelucrării. Îți poți retrage acordul oricând, fără să afecteze ce s-a făcut înainte. <span data-contact-rights></span> Ai și dreptul să depui o plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (<a href="https://www.dataprotection.ro" rel="noopener">dataprotection.ro</a>).</p>
+
+  <h2>Vârsta</h2>
+  <p>Serenis este doar pentru persoane de peste 18 ani. Sezonul Fondator se adresează persoanelor între 25 și 38 de ani.</p>
+
+  <p style="margin-top:40px"><a href="./">← Înapoi la Serenis</a></p>
+</main>
+<footer class="foot"><p>Serenis este un proiect <span data-controller>LEX INC S.R.L.</span></p></footer>
+<script src="config.js"></script>
+<script>
+(function () {
+  var C = window.SERENIS_CONFIG || {};
+  var isLocal = ["localhost", "127.0.0.1"].indexOf(location.hostname) !== -1;
+  var contact = (isLocal && new URLSearchParams(location.search).get("contact")) || C.contactEmail || "";
+  document.querySelectorAll("[data-controller]").forEach(function (n) { if (C.controller) n.textContent = C.controller; });
+  if (C.controllerDetails) document.querySelector("[data-controller-details]").textContent = ", " + C.controllerDetails.replace(/\.$/, "") + ".";
+  function mail(text) {
+    var a = document.createElement("a"); a.href = "mailto:" + contact; a.textContent = contact;
+    var s = document.createElement("span"); s.append(text, a, "."); return s;
+  }
+  if (contact) {
+    document.querySelector("[data-contact-line]").append(mail("Ne poți scrie la "));
+    document.querySelector("[data-contact-rights]").append(mail("Pentru oricare dintre ele, scrie-ne la "));
+  } else {
+    document.querySelector("[data-contact-line]").textContent = "Datele de contact se publică înainte de deschiderea aplicațiilor; până atunci, pagina nu colectează nicio informație.";
+  }
+})();
+</script>
+</body>
+</html>
