@@ -38,7 +38,7 @@
       lede: "Aplicațiile sunt construite să te țină pe ecran. Serenis e construit să te scoată de acolo: o introducere atentă, un da de ambele părți, o întâlnire confirmată. Plătești doar dacă are loc."
     }
   };
-  var variant = HEROES[(params.get("h") || "").toLowerCase()] ? params.get("h").toLowerCase() : "a";
+  var variant = HEROES[(params.get("h") || "").toLowerCase()] ? params.get("h").toLowerCase() : "c";
 
   var referrerHost = "";
   try { referrerHost = document.referrer ? new URL(document.referrer).hostname : ""; } catch (e) { referrerHost = ""; }
